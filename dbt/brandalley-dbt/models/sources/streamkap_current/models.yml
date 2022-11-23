@@ -7,6 +7,9 @@ models:
       - name: user_id
         data_type: <integer>
         description: "primary key"
+        tests:
+          - unique
+          - not_null 
       - name: firstname
         data_type: <string>
         description: "First name, nullable"
@@ -78,6 +81,9 @@ models:
       - name: id
         data_type: <integer>
         description: "Primary key"
+        tests:
+          - unique
+          - not_null
       - name: order_item_number
         data_type: <integer>
         description: "Order item number"
@@ -122,6 +128,9 @@ models:
       - name: entity_id
         data_type: <integer>
         description: "Primary key"
+        tests:
+          - not_null
+          - unique 
       - name: entity_type_id
         data_type: <integer>
         description: "Entity type id"
@@ -160,6 +169,9 @@ models:
       - name: line_id
         data_type: <integer>
         description: "Primary key"
+        tests: 
+          - not_null
+          - unique
       - name: category_id
         data_type: <integer>
         description: "Category id"
@@ -192,6 +204,9 @@ models:
       - name: value_id
         data_type: <integer>
         description: "Primary key"
+        tests: 
+          - not_null
+          - unique
       - name: entity_type_id
         data_type: <integer>
         description: "Entity type id"
@@ -218,6 +233,9 @@ models:
       - name: value_id
         data_type: <integer>
         description: "Primary key"
+        tests: 
+          - not_null
+          - unique
       - name: entity_type_id
         data_type: <integer>
         description: "Entity type id"
@@ -244,6 +262,9 @@ models:
       - name: category_id
         data_type: <integer>
         description: "Primary key, Category id"
+        tests:
+          - not_null
+          - unique
       - name: product_id
         data_type: <integer>
         description: "Primary key, Product id"
@@ -261,6 +282,9 @@ models:
       - name: entity_id
         data_type: <integer>
         description: "Primary key"
+        tests:
+          - not_null
+          - unique
       - name: entity_type_id
         data_type: <integer>
         description: "Entity type id"
@@ -296,6 +320,9 @@ models:
       - name: value_id
         data_type: <integer>
         description: "Primary key"
+        tests: 
+          - not_null
+          - unique
       - name: entity_type_id
         data_type: <integer>
         description: "Entity type id"
@@ -322,6 +349,9 @@ models:
       - name: value_id
         data_type: <integer>
         description: "Primary id"
+        tests:
+          - not_null
+          - unique
       - name: entity_type_id
         data_type: <integer>
         description: "Entity type id"
@@ -348,6 +378,9 @@ models:
       - name: value_id
         data_type: <integer>
         description: "Primary key"
+        test: 
+          - not_null
+          - unique
       - name: entity_type_id
         data_type: <integer>
         description: "Entity type id"
@@ -374,6 +407,9 @@ models:
       - name: value_id
         data_type: <integer>
         description: "Primary key"
+        test: 
+          - not_null
+          - unique
       - name: entity_type_id
         data_type: <integer>
         description: "Entity type id"
@@ -400,6 +436,9 @@ models:
       - name: negotiation_id
         data_type: <integer>
         description: "Primary key"
+        test:
+          - not_null
+          - unique
       - name: updated_at
         data_type: <timestamp>
         description: "Update time, nullable"
@@ -501,6 +540,9 @@ models:
       - name: negotiation_item_id
         data_type: <integer>
         description: "Primary key"
+        test: 
+          - not_null
+          - unique
       - name: negotiation_id
         data_type: <integer>
         description: "Negotiation id"
@@ -581,6 +623,9 @@ models:
       - name: reference_id
         data_type: <integer>
         description: "Primary key"
+        test: 
+          - not_null
+          - unique
       - name: entity_id
         data_type: <integer>
         description: "Entity id"
@@ -604,6 +649,9 @@ models:
       - name: link_id
         data_type: <integer>
         description: "Primary key"
+        test: 
+          - not_null
+          - unique
       - name: product_id
         data_type: <integer>
         description: "Product id"
@@ -621,6 +669,9 @@ models:
       - name: supplier_id
         data_type: <integer>
         description: "Primary key"
+        test: 
+          - not_null
+          - unique
       - name: name
         data_type: <string>
         description: "Name"
@@ -656,6 +707,9 @@ models:
       - name: item_id
         data_type: <integer>
         description: "Primary key"
+        test: 
+          - not_null
+          - unique
       - name: product_id
         data_type: <integer>
         description: "Product id"
@@ -739,6 +793,9 @@ models:
       - name: value_id
         data_type: <integer>
         description: "Primary key"
+        test:
+          - not_null
+          - unique
       - name: entity_type_id
         data_type: <integer>
         description: "Entity type id"
@@ -762,6 +819,9 @@ models:
       - name: value_id
         data_type: <integer>
         description: "Primary key"
+        test:
+          - not_null
+          - unique
       - name: entity_type_id
         data_type: <integer>
         description: "Entity type id"
@@ -785,6 +845,9 @@ models:
       - name: entity_id
         data_type: <integer>
         description: "Primary key"
+        test:
+          - not_null
+          - unique
       - name: entity_type_id
         data_type: <integer>
         description: "Entity type id"
@@ -829,6 +892,9 @@ models:
       - name: line_id
         data_type: <integer>
         description: "Primary key"
+        test:
+          - not_null
+          - unique
       - name: customer_id
         data_type: <integer>
         description: "Customer id, Foreign key"
@@ -864,6 +930,9 @@ models:
       - name: value_id
         data_type: <integer>
         description: "Primary key"
+        test:
+          - not_null
+          - unique
       - name: entity_type_id
         data_type: <integer>
         description: "Entity type id"
@@ -887,6 +956,9 @@ models:
       - name: value_id
         data_type: <integer>
         description: "Primary key"
+        test:
+          - not_null
+          - unique
       - name: entity_type_id
         data_type: <integer>
         description: "Entity id"
@@ -910,6 +982,9 @@ models:
       - name: value_id
         data_type: <integer>
         description: "Primary key"
+        test: 
+          - not_null
+          - unique
       - name: entity_type_id
         data_type: <integer>
         description: "Entity id"
@@ -933,6 +1008,9 @@ models:
       - name: value_id
         data_type: <integer>
         description: "Primary key"
+        test:
+          - not_null
+          - unique
       - name: entity_type_id
         data_type: <integer>
         description: "Entity id"
@@ -956,6 +1034,9 @@ models:
       - name: value_id
         data_type: <integer>
         description: "Primary key"
+        test: 
+          - not_null
+          - unique
       - name: option_id
         data_type: <integer>
         description: "Option id"
@@ -976,6 +1057,9 @@ models:
       - name: referer_id
         data_type: <integer>
         description: "Primary key"
+        test:
+          - not_null
+          - unique
       - name: entity_id
         data_type: <integer>
         description: "Entity id"
@@ -1020,6 +1104,9 @@ models:
       - name: log_id
         data_type: <integer>
         description: "Primary key"
+        test:
+          - not_null
+          - unique
       - name: visitor_id
         data_type: <integer>
         description: "Visitor id, nullable"
@@ -1046,6 +1133,9 @@ models:
       - name: subscriber_id
         data_type: <integer>
         description: "Primary key"
+        test:
+          - not_null
+          - unique
       - name: store_id
         data_type: <integer>
         description: "Store id, nullable"
@@ -1087,6 +1177,9 @@ models:
       - name: entity_id
         data_type: <integer>
         description: "Primary Key"
+        test:
+          - not_null
+          - unique
       - name: store_id
         data_type: <integer>
         description: "Store id, nullable"
@@ -1356,6 +1449,9 @@ models:
       - name: entity_id
         data_type: <integer>
         description: "Primary key"
+        test:
+          - not_null
+          - unique
       - name: parent_id
         data_type: <integer>
         description: "Parent id"
@@ -1475,6 +1571,9 @@ models:
       - name: entity_id
         data_type: <integer>
         description: "Order id, primary key"
+        test:
+          - not_null
+          - unique
       - name: state
         data_type: <string>
         description: "State, nullable"
@@ -2140,6 +2239,9 @@ models:
       - name: entity_id
         data_type: <integer>
         description: "Id of the order addresss, primiary key"
+        test:
+          - not_null
+          - unique
       - name: parent_id
         data_type: <integer>
         description: "Parent id, foreign key, nullable"
@@ -2232,6 +2334,9 @@ models:
       - name: item_id
         data_type: <integer>
         description: "Id of the line order, primary key"
+        test: 
+          - not_null
+          - unique
       - name: order_id
         data_type: <integer>
         description: "Id of the order, foreign key"
@@ -2576,6 +2681,9 @@ models:
       - name: line_id
         data_type: <integer>
         description: "Line id, primary key"
+        test: 
+          - not_null
+          - unique
       - name: order_item_id
         data_type: <integer>
         description: "Order item id, foreign key"
@@ -2596,6 +2704,9 @@ models:
       - name: entity_id
         data_type: <decimal>
         description: "Order payment id, primary key"
+        test:
+          - not_null
+          - unique
       - name: parent_id
         data_type: <decimal>
         description: "Order payment parent id, foreign key"
@@ -2769,6 +2880,9 @@ models:
       - name: entity_id
         data_type: <integer>
         description: "Shipment id, primary key"
+        test: 
+          - not_null
+          - unique
       - name: store_id
         data_type: <integer>
         description: "Store id, foreign key, nullable"
@@ -2822,6 +2936,9 @@ models:
       - name: entity_id
         data_type: <integer>
         description: "Shipment item ID, primary key"
+        test:
+          - not_null
+          - unique
       - name: parent_id
         data_type: <integer>
         description: "Shipment item ID of the parent, foreign key"
@@ -2871,6 +2988,9 @@ models:
       - name: class_id
         data_type: <integer>
         description: "Primary key"
+        test:
+          - not_null
+          - unique
       - name: class_name
         data_type: <string>
         description: "Tax class name"
