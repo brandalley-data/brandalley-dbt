@@ -259,12 +259,14 @@ models:
   - name: stg__catalog_category_product
     description: ""
     columns:
-      - name: category_id
-        data_type: <integer>
-        description: "Primary key, Category id"
+      - name: composite_key
+        description: "composite primary key made from category_id and product_id using dbt_utils surrogate key"
         tests:
           - not_null
           - unique
+      - name: category_id
+        data_type: <integer>
+        description: "Primary key, Category id"
       - name: product_id
         data_type: <integer>
         description: "Primary key, Product id"
