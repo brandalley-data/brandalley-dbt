@@ -259,15 +259,19 @@ models:
   - name: stg__catalog_category_product
     description: ""
     columns:
+      - name: composite_key 
+        test:
+          - unique 
       - name: category_id
         data_type: <integer>
         description: "Primary key, Category id"
         tests:
           - not_null
-          - unique
       - name: product_id
         data_type: <integer>
         description: "Primary key, Product id"
+        tests:
+          - not_null
       - name: position
         data_type: <integer>
         description: "Position"
@@ -1031,18 +1035,23 @@ models:
   - name: stg__eav_attribute_option_value
     description: ""
     columns:
+      - name: composite_key
+        test:
+          - unique
       - name: value_id
         data_type: <integer>
         description: "Primary key"
-        test: 
-          - not_null
-          - unique
+
       - name: option_id
         data_type: <integer>
         description: "Option id"
+        tests:
+          - not_null
       - name: store_id
         data_type: <integer>
         description: "Store id"
+        tests:
+          - not_null 
       - name: value
         data_type: <integer>
         description: "Value, nullable"
